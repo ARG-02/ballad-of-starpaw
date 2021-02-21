@@ -1,0 +1,109 @@
+Daily Log For AI Project
+
+Day 1:
+    Both -
+        Brainstormed ideas for AI Project
+            Decided on a video game that uses hand gestures as controls
+        Game will mostly likely be a 2D platformer
+        Development will be done through PyGame
+        Main character for game will be a dog with the whole game having a "dog" theme
+        3/4 of the way through the tutorial
+        Tutorial: https://realpython.com/pygame-a-primer/#sprite-groups
+        Art: https://opengameart.org/art-search?keys=dog
+
+Day 2:
+    Neil -
+        Finished the tutorial game - Figured out pygame pretty good dog is good very nice
+
+Day 3:
+    Both -
+        Kingdom name - Fetchlands
+        Game name - The Ballad of Starpaw (Fantasy)
+        Dog name - Starpaw, Villian name - Nightsoul
+
+        Story -
+
+            These 2 brothers are 2 princes of kingdom
+            One day, someone tells one of the brothers he is bad dog
+            Then he turns into nightsoul. This is why you tell dog, he good!
+            He runs away and makes his own spooky kingdom.
+            He gets all the dogs from around the bad dog world.
+            He is king of the Bad Dogs (TM)
+
+            The only way to stop NightSoul is for Starpaw (other brother)
+            to journey across the 3 - 5 levels,
+            to tell him he very good dog, yes he is what a little ragashit.
+            Then he comes back, game end
+
+        Items/Trinkets -
+
+            Chocolate - Takes away health
+            Needles/Vet - Speed goes down
+            Letter/Mail - Stops moving and starts barking
+
+            Bone - Gives extra life
+            Dog Treat/Food - Gives health
+            Dog Toy:
+                Bouncy Ball - Jump Power
+                Leash - Speed
+                Tennis ball cannon - Picks up tennis ball
+
+        Level 1 -
+
+            Home kingdom
+            Learns about story more here from his dad (King)
+
+        Level 2 -
+
+            Abandoned Dog Park
+            Introducing enemies & basic platforming since hand controls
+
+        Level 3 -
+
+            Vet
+            Mid "boss" is Veterenarian
+
+        Level 4 -
+
+            Spooky Forest
+            Harder enemies with powerups
+
+        Level 5 -
+
+            Bad dog Kingdom
+            Final "boss" is NightSoul
+            End of Game, returns to home
+
+    Neil (Notes) -
+        main.py is the main activation file
+        Collision and jumping with enemies - If he is above the top of enemy - kill enemy, else, lose life
+
+    Neil -
+        Built framework and started main menu
+        Found https://towardsdatascience.com/training-a-neural-network-to-detect-gestures-with-opencv-in-python-e09b0a12bdf1
+
+    Adit -
+        Designed Level 1 Layout and brainstormed ideas
+
+Day 4:
+    Neil -
+        Did main menu script
+
+Day 5:
+    Links -
+    https://arcade.academy/examples/platform_tutorial/index.html
+    https://opensource.com/article/18/7/put-platforms-python-game
+
+    Neil -
+        Started programming level 1
+
+    Adit -
+        Updated assets
+        Did jumping
+
+____CREDITING____
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F463237511657731867%2F&psig=AOvVaw0_IXlBv8lQ-mY4ChlMF9qc&ust=1613779915922000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOChrunU9O4CFQAAAAAdAAAAABAD
+https://cdna.artstation.com/p/assets/images/images/031/043/400/large/theophile-curto-twfbetc-x4size.jpg?1602430862
+https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b64e2615-da05-43b7-8fbb-9a6ecab66a71/d8cf2nv-59085ab2-351e-447a-8241-bacfcd473250.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYjY0ZTI2MTUtZGEwNS00M2I3LThmYmItOWE2ZWNhYjY2YTcxXC9kOGNmMm52LTU5MDg1YWIyLTM1MWUtNDQ3YS04MjQxLWJhY2ZjZDQ3MzI1MC5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.GRDvTtGwD5qjvala13TwVrO-baHLayy1ugvOfEwPlpE
+http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/

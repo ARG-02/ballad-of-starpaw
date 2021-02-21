@@ -1,0 +1,9 @@
+Debugging-
+
+ - it's falling too slowly when there's no collisions
+ - CLIPPING CLIPPING CLIPPING!!!!
+ - Jumping and turning around animation turns weird!!
+ - Running animation is too fast
+ - Left collisions always happen, right collisions never happen (Change that)
+ - Falling detection animatino not woprkgin
+ - White colorkey and brown colorkey (Size down the idle btw) - Do it everytime pygame load image - DO LATER!!
