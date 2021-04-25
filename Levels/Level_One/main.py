@@ -1,11 +1,13 @@
 import os, pygame
 from pygame.locals import (
-    QUIT
+    QUIT,
+    KEYDOWN,
+    K_SPACE
 )
 
 from code_fragments.constants import width, height
 from code_fragments.Sprites.Characters.Dog.Starpaw import Starpaw
-from code_fragments.Sprites.platforms.ground import Ground
+from code_fragments.Sprites.platforms.platform import Platform
 from code_fragments.functions.collision_checker import collision_checker
 
 pygame.mixer.init()
@@ -17,45 +19,56 @@ clock = pygame.time.Clock()
 speed = 60
 walking_animation_iteration = 0
 
-starpaw = Starpaw()
-ground = Ground(0, 0)
-ground.rect.y = height-ground.rect.height
-platform_test = Ground(width/2, 250)
-
 platforms = pygame.sprite.Group()
 all_sprites = pygame.sprite.Group()
 
-all_sprites.add(starpaw)
-all_sprites.add(ground)
-all_sprites.add(platform_test)
+starpaw = Starpaw(platforms)
 
-platforms.add(ground)
-platforms.add(platform_test)
+platforms_list = [(0, height-150, "assets/textures/Levels/Platforms/Ground.png"),
+                  (width/2, height/2-200, "assets/textures/Levels/Platforms/Ground.png")]
+
+for platform in platforms_list:
+    p = Platform(*platform)
+    all_sprites.add(p)
+    platforms.add(p)
+
+all_sprites.add(starpaw)
 
 running = True
 while running:
+    # Events
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
+        if event.type == KEYDOWN:
+            if event.key == K_SPACE:
+                starpaw.jump()
 
+    # Update Starpaw
+    all_sprites.update()
+
+    # Collision checking
+    if starpaw.vel.y > 0:
+        hits = pygame.sprite.spritecollide(starpaw, platforms, False)
+        if hits:
+            starpaw.pos.y = hits[0].rect.top
+            starpaw.vel.y = 0
+
+    if starpaw.rect.centerx >= 3 * width / 4:
+        starpaw.pos.x += starpaw.vel.x
+        for plat in platforms:
+            plat.rect.x += starpaw.vel.y
+
+
+    # Blitting and setting drawings
     screen.fill((135, 206, 250))
-
-    # Collision check
-
-    starpaw.right_collision, starpaw.down_collision, starpaw.up_collision, starpaw.left_collision = False, False, False, False
-
-    collision = pygame.sprite.spritecollide(starpaw, platforms, False)
-
-    collision_checker(collision, starpaw)
-
-    # Update the character
-
-    pressed_keys = pygame.key.get_pressed()
-    starpaw.update(pressed_keys)
 
     for entity in all_sprites:
         screen.blit(entity.surf, entity.rect)
 
+    screen.blit(starpaw.surf, starpaw.rect)
+
+    # Flip the display
     pygame.display.flip()
 
     clock.tick(speed)

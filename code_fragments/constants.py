@@ -1,9 +1,11 @@
-import os
+import pygame
 
 width = 1280
 height = 720
 
-gravity = 5
-vertical_velocity = -50
+vertical_acceleration = -50
+horizontal_acceleration = 0.5
+horizontal_friction = -0.12
 
-starpaw_walking_list = [name for name in os.listdir('assets/textures/characters/dogs/starpaw/walking') if os.path.isfile(os.path.join('assets/textures/characters/dogs/starpaw/walking', name))]
+vec = pygame.math.Vector2
+gravity = 0.8

@@ -101,6 +101,13 @@ Day 5:
         Updated assets
         Did jumping
 
+Day 6:
+    Both -
+        Added to github
+        Major refactoring of physics engine
+        Found https://www.youtube.com/channel/UCNaPQ5uLX5iIEHUCLmfAgKg - very nice man
+        Made slight adjustments to images
+
 ____CREDITING____
 
 https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F463237511657731867%2F&psig=AOvVaw0_IXlBv8lQ-mY4ChlMF9qc&ust=1613779915922000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOChrunU9O4CFQAAAAAdAAAAABAD
